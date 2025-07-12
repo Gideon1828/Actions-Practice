@@ -1,0 +1,13 @@
+name: Sample CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest   # 👉 This uses GitHub's shared runner
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Print Hello
+      run: echo "Hello from GitHub Actions shared runner!"
